@@ -1,0 +1,120 @@
+/* ESTILO BASE (Letra y Fondo) */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: #4ba8a1 100%; /* Para que parezca como agua o un pozo*/
+}
+
+/* REJILLA (Donde van los squares y Modificada para que quede en el centro) */
+.grid {
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin: 30px auto;
+}
+
+/* CUADRADOS */
+.square {
+  height: 180px;
+  width: 180px;
+  margin: 10px;
+  border-radius: 50%; /* Para hacerla circulares y que parezcan hojas */
+  border: none;
+  background-color: #b5d67a; /* El tono verde para que se vea como hoja */
+  box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.2),
+              4px 4px 8px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* FROGGY O "MOLE" Cambiarlo para que sea un froggy */
+.mole {
+	background-image: url("froggy.png");
+	background-size: cover;
+}
+
+/* ENCABEZADO */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  color: #b5d67a;
+}
+
+/* Contenedor principal: alinea tablero e info */
+.game-container {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* <- antes era center */
+  gap: 40px;
+  margin-top: 30px;
+}
+
+/* PANEL DE INFORMACIÓN (al lado del tablero) */
+.info-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 20px 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  position: absolute;
+  left: 100px;
+  top: 200px;
+}
+
+/* H1 centrado */
+h1 {
+  text-align: center;
+  color: #b5d67a;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+/* BOTÓN DE REINICIO */
+#reset-btn {
+  background-color: #b5d67a;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 12px;
+  color: #486811;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+#reset-btn:hover {
+  background-color: #a1c76d;
+}
+
+/* Barra del slider */
+#speed {
+  appearance: none;
+  width: 150px;
+  height: 8px;
+  background: #a1c76d;   /* verde claro */
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+}
